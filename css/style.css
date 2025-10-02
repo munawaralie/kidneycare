@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "Fira Sans";
+    src: url(../fonts/FiraSans-Medium.ttf);
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Medium.woff);
+}
+
+
+:root{
+    --color-primary:#00A0AA;
+    --color-secondary:#2A3E79;
+    --gradient-primary: linear-gradient(135deg, #00A0AA 0%, #006C73 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+}
+.row{
+    display: flex;
+    width: 100%;
+}
+.h{
+    height: 20vh;
+}
+.b{
+    border: 1px solid black;
+}
+header{
+    font-family: "Poppins";
+}
+header .header-r1-outer-cont{
+    background: var(--gradient-primary);
+    color: #fff;
+    padding: 13px 0px;
+}
+.header-r1{
+    justify-content: space-between;
+    align-items: center;
+}
+.header-r1 .header-r1-right a{
+    color: #fff;
+    background: transparent;
+    padding: 7px 25px;
+    border: 2.5px solid #FFFFFF;
+    border-radius: 32px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.header-r1{
+    justify-content: space-between;
+    align-items: center;
+}
+.header-r1-left, .header-phone{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.header-r1-left a{
+    color: #fff;
+    text-decoration: none;
+}
+.header-r2 {
+    gap: 20px;
+    padding: 35px 0;
+    align-items: center;
+}
+
+.header-r2 .header-r2-left{
+    width: 280px;
+}
+.header-r2 .header-r2-right{
+    width: calc(100% - 280px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+/* .header-r2-right nav *{
+    border: 1px solid black;
+} */
+.header-r2-right nav ul{
+    display: flex;
+    list-style: none;
+}
+.header-r2-right nav ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+.header-r2-right nav ul li a{
+    font-size: 16px;
+    /* font-weight: 500; */
+    text-decoration: none;
+    color: #595959;
+    text-transform: uppercase;
+   
+}
+.header-r2-right .header-appointment-btn{
+    text-transform: uppercase;
+    color: #ffff;
+    background: #2A3E79;
+    padding: 15px 30px;
+    border-radius: 32px;
+    text-decoration: none;
+}
