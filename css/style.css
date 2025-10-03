@@ -1,119 +1,200 @@
+/* style.css */
+
+/* ---------- Fonts ---------- */
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-Medium.ttf);
+    src: url("../fonts/FiraSans-Medium.ttf");
 }
+
 @font-face {
     font-family: "Poppins";
-    src: url(../fonts/Poppins-Medium.woff);
+    src: url("../fonts/Poppins-Medium.woff");
 }
 
-
-:root{
-    --color-primary:#00A0AA;
-    --color-secondary:#2A3E79;
+/* ---------- Variables ---------- */
+:root {
+    --color-primary: #00A0AA;
+    --color-secondary: #2A3E79;
     --gradient-primary: linear-gradient(135deg, #00A0AA 0%, #006C73 100%);
 }
-*{
+
+/* ---------- Global Reset ---------- */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     overflow-x: hidden;
 }
+
+body {
+    /* optionally set a default font */
+    font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Layout containers ---------- */
 .container {
     max-width: 1520px;
     margin: 0 auto;
     padding: 0 50px;
-
 }
-.row{
+
+.row {
     display: flex;
     width: 100%;
 }
-.h{
-    height: 20vh;
+
+/* ---------- Header / Navigation ---------- */
+header {
+    position: relative;
+    width: 100%;
 }
-.b{
-    border: 1px solid black;
-}
-header{
-    font-family: "Poppins";
-}
-header .header-r1-outer-cont{
+
+/* Top bar (header row 1) */
+.header-r1-outer-cont {
     background: var(--gradient-primary);
     color: #fff;
-    padding: 13px 0px;
+    padding: 13px 0;
 }
-.header-r1{
+
+.header-r1 {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header-r1 .header-r1-right a{
-    color: #fff;
-    background: transparent;
-    padding: 7px 25px;
-    border: 2.5px solid #FFFFFF;
-    border-radius: 32px;
-    cursor: pointer;
-    text-decoration: none;
-}
-.header-r1{
-    justify-content: space-between;
-    align-items: center;
-}
-.header-r1-left, .header-phone{
+
+.header-r1-left,
+.header-phone {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 15px;
 }
 
-.header-r1-left a{
+.header-r1-left a {
     color: #fff;
     text-decoration: none;
 }
-.header-r2 {
-    gap: 20px;
-    padding: 35px 0;
-    align-items: center;
+
+.header-r1 .header-r1-right a {
+    color: #fff;
+    background: transparent;
+    padding: 7px 25px;
+    border: 2.5px solid #fff;
+    border-radius: 32px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.header-r2 .header-r2-left{
-    width: 280px;
+/* Navigation / second row */
+.header-r2-outer-cont {
+    position: absolute;
+    width: 100%;
+    z-index: 11;
 }
-.header-r2 .header-r2-right{
+
+.header-r2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 35px 0;
+}
+
+.header-r2-left {
+    width: 280px;
+    /* You may want to adjust this or make it flexible */
+}
+
+.header-r2-right {
     width: calc(100% - 280px);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
-/* .header-r2-right nav *{
-    border: 1px solid black;
-} */
-.header-r2-right nav ul{
-    display: flex;
-    list-style: none;
+
+/* Menu container to toggle */
+#menuList {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 }
-.header-r2-right nav ul{
+
+/* Navigation list styling */
+.header-r2-right nav ul {
     display: flex;
-    list-style: none;
+    list-style-type: none;
     gap: 40px;
 }
-.header-r2-right nav ul li a{
+
+.header-r2-right nav ul li a {
     font-size: 16px;
-    /* font-weight: 500; */
     text-decoration: none;
     color: #595959;
     text-transform: uppercase;
-   
+    white-space: nowrap;
 }
-.header-r2-right .header-appointment-btn{
+
+/* Appointment / call-to-action button in header */
+.header-appointment-btn {
     text-transform: uppercase;
-    color: #ffff;
-    background: #2A3E79;
+    color: #fff;
+    background: var(--color-secondary);
     padding: 15px 30px;
     border-radius: 32px;
     text-decoration: none;
 }
+
+/* Hero / banner section */
+.home-sec-1 {
+    height: 80vh;
+    background-image: url("../images/home inner banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 160px;
+}
+
+/* Hamburger toggler (mobile) */
+.navbar-toggler {
+    display: none;
+    /* hide by default, show in mobile */
+}
+
+.navbar-toggler i {
+    font-size: 30px;
+    color: var(--color-secondary);
+}
+.home-sec-1 .r1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100vh;
+    /* border: 1px solid black; */
+}
+.home-sec-1 .r1 .content{
+    /* max-width: 753px; */
+    width: 53%;
+}
+.home-sec-1 .r1 .appointment-form{
+    /* width: calc(100% - 753px - 87px); */
+    width: 40%;
+}
+.home-sec-1 .content-heading{
+font-family: "Fira Sans";
+font-size: 51px;
+color: #2A3E79;
+font-weight: 700;
+margin-bottom: 40px;
+}
+.home-sec-1 .content-desc {
+    font-family: "Poppins";
+        font-size: 18px;
+        color: #595959;
+        margin-bottom: 40px;
+        font-weight: 500;
+}
+

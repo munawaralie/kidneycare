@@ -2,16 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <meta name="description"
-        content="Board-certified nephrology consultants providing advanced kidney care with 10 office locations. Expert treatment for kidney disease, dialysis, transplant workup, and hypertension management.">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-quries.css" />
 </head>
 
 <body>
-
     <header>
         <div class="header-r1-outer-cont">
             <div class="container">
@@ -19,7 +18,7 @@
                     <div class="header-r1-left">
                         <span>24 Hours on Call</span>
                         <span class="header-phone">
-                            <img src="./images/icons/phone.png" alt="phone icon">
+                            <img src="./images/icons/phone.png" alt="phone icon" />
                             <a href="tel:502-595-7744">502-595-7744</a>
                         </span>
                     </div>
@@ -29,29 +28,56 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row header-r2">
-                <div class="header-r2-left">
-                    <a href="index.html">
-                        <img src="./images/kidneycare logo.png" alt="kidneycare logo">
-                    </a>
-                </div>
-                <div class="header-r2-right ">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Our Providers</a></li>
-                            <li><a href="#">Clinic Locations</a></li>
-                            <li><a href="#">Patient Portal</a></li>
-                            <li><a href="#">Contact US</a></li>
-                        </ul>
-                    </nav>
-                    <a href="#" class="header-appointment-btn">schedule an appointment</a>
+
+        <div class="header-r2-outer-cont">
+            <div class="container">
+                <div class="row header-r2">
+                    <div class="header-r2-left">
+                        <a href="index.html">
+                            <img src="./images/kidneycare logo.png" alt="kidneycare logo" />
+                        </a>
+                    </div>
+
+                    <div class="header-r2-right" id="menuList">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Our Providers</a></li>
+                                <li><a href="#">Clinic Locations</a></li>
+                                <li><a href="#">Patient Portal</a></li>
+                                <li><a href="#">Contact US</a></li>
+                            </ul>
+                        </nav>
+                        <a href="#" class="header-appointment-btn">Schedule an Appointment</a>
+                    </div>
+
+                    <div class="navbar-toggler">
+                        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
+    <section class="home-sec-1">
+        <div class="container">
+            <div class="row r1">
+                <div class="content">
+                    <p class="content-heading">
+                        At Kidney Care Consultants, P.S.C. We are committed to providing patients with the best in
+                        advanced, specialized care
+                    </p>
+                    <p class="content-desc">
+                        Our board-certified staff is experienced in the areas of internal medicine and nephrology. With
+                        21 offices locally, we
+                        are one of the region’s largest and most convenient choices for nephrology care.
+                    </p>
+                </div>
+                <div class="appointment-form"></div>
+
+            </div>
+        </div>
+    </section>
 
     <script src="js/script.js"></script>
 </body>

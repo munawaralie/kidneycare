@@ -1,0 +1,53 @@
+@media (max-width: 1024px) {
+    .header-r2-right {
+        position: absolute;
+        top: 120px;
+        /* adjust if header height is different */
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #2a3e7982;
+        /* just for visibility — change or remove */
+        /* overflow remains hidden by #menuList’s rule */
+    }
+
+    .header-r2 {
+        justify-content: space-between;
+    }
+
+    .header-r2 nav {
+        padding-top: 30px;
+    }
+
+    .header-appointment-btn {
+        margin-bottom: 30px;
+    }
+
+    .header-r2-right nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .header-r2-right nav ul li a {
+        color: #fff;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+/* ---------- Desktop / large screens: always show menu ---------- */
+@media (min-width: 1025px) {
+    #menuList {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .navbar-toggler {
+        display: none !important;
+    }
+}
