@@ -7,8 +7,28 @@
 }
 
 @font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Bold.woff');
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-ExtraBold.ttf');
+}
+
+@font-face {
     font-family: 'Poppins';
     src: url('../fonts/Poppins-Medium.woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.woff');
 }
 
 /* ---------- Variables ---------- */
@@ -29,7 +49,8 @@ html {
     overflow-x: hidden;
 }
 
-body {
+body,
+p {
     /* optionally set a default font */
     font-family: 'Poppins', sans-serif;
 }
@@ -139,13 +160,52 @@ header {
 }
 
 /* Appointment / call-to-action button in header */
-.header-appointment-btn {
+.header-appointment-btn,
+.home-sec-3 .view-more-btn,
+.home-sec-4 .view-more-btn {
     text-transform: uppercase;
     color: #fff;
     background: var(--color-secondary);
     padding: 15px 30px;
     border-radius: 32px;
     text-decoration: none;
+    border: none;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+
+.home-sec-1,
+.home-sec-2,
+.home-sec-3,
+.home-sec-4,
+.home-sec-5 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.home-sec-2 .r2,
+.home-sec-3 {
+    /* display: none; */
+}
+
+.sec-heading {
+    font-family: 'Fira Sans';
+    font-size: 55px;
+    color: #2A3E79;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.sec-para {
+    font-family: 'Poppins';
+    font-size: 18px;
+    color: #595959;
+    margin-bottom: 50px;
+    font-weight: 400;
+    text-align: center;
 }
 
 /* Hero / banner section */
@@ -155,7 +215,6 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 170px;
-    padding-bottom: 100px;
 }
 
 /* Hamburger toggler (mobile) */
@@ -238,11 +297,12 @@ header {
     box-shadow: 0 0px 30px 0 #6060601A;
 }
 
-.appointment-form h3 {
+.appointment-form .appointment-form-h {
     font-size: 30px;
     text-align: center;
     color: #2A3E79;
     margin-bottom: 24px;
+    font-weight: 700;
 }
 
 .form-group {
@@ -311,4 +371,259 @@ header {
     font-family: 'Poppins';
     color: #60606042;
     font-weight: 400;
+}
+
+/* services */
+.Services-card-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 29px;
+}
+
+.Services-card-row .Services-card {
+    width: calc((100% - 3 * 29px) / 4);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-shadow: 0px 0px 30px 0 #6060600D;
+    transition: all ease 0.7s;
+    transform: scale(1);
+}
+
+.Services-card-row .Services-card:hover {
+    transition: all ease 0.7s;
+    transform: scale(1.05);
+    background: var(--gradient-primary);
+}
+
+.Services-card-row .Services-card:hover .Services-card-svg {
+    border: none;
+    background: #fff;
+}
+
+.Services-card-row .Services-card:hover * {
+    color: #fff;
+}
+
+.Services-card-row .Services-card:hover button {
+    color: #00A0AA;
+    background: #fff;
+}
+
+.Services-card-row .Services-card:hover button svg path {
+    color: #00A0AA;
+    fill: #00A0AA;
+}
+
+.Services-card-row .Services-card .Services-card-svg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #00A0AA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.Services-card .Services-card-h {
+    font-family: 'Poppins';
+    color: #2A3E79;
+    margin-bottom: 20px;
+}
+
+.Services-card .Services-card-p {
+    color: #595959;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.Services-card .Services-card-btn,
+.location-card-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    color: #2A3E79;
+    gap: 10px;
+    border-radius: 32px;
+    font-weight: 600;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.location-card-btn {
+    padding: 0px;
+    font-size: 16px;
+}
+
+/* our location  */
+.home-sec-3 {
+    background: #F1FEFFF2;
+}
+
+.location-card-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.location-card-row .location-card {
+    width: calc((100% - 1 * 30px) / 2);
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #fff;
+    gap: 20px;
+    align-items: center;
+}
+
+.location-card-row .location-card .location-card-img {
+    max-width: 242px;
+}
+
+.location-card-row .location-card .location-card-content {
+    padding: 40px 20px;
+    color: #595959;
+    font-size: 16px;
+    width: calc(100% - 242px);
+}
+
+
+.location-card-row .location-card .location-card-content .location-card-h {
+    color: #2A3E79;
+    margin-bottom: 15px;
+    text-align: start;
+}
+
+.location-card .location-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.location-card .location-details img {
+    width: 18px;
+    height: 18px;
+}
+
+.location-card .contact-details {
+    display: flex;
+    margin-bottom: 14px;
+}
+
+.contact-details .call,
+.contact-details .fax {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.contact-details .call a,
+.contact-details .fax a {
+    text-decoration: none;
+    color: #595959;
+}
+
+.home-sec-3 .r3,
+.home-sec-4 .r3 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.home-sec-3 .view-more-btn,
+.home-sec-4 .view-more-btn {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 30px;
+    cursor: pointer;
+    min-width: 218px;
+}
+
+.home-sec-3 .view-more-btn {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 30px;
+    cursor: pointer;
+    min-width: 218px;
+}
+
+/* our team  */
+.home-sec-4 {
+    background: #fff;
+}
+
+.team-card-row {
+    display: flex;
+    gap: 40px;
+}
+
+.team-card-row .team-card {
+    width: calc((100% - 4 * 40px) / 5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-shadow: 0px 0px 30px 0 #6060600D;
+    transition: all ease 0.7s;
+}
+
+.team-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.team-card .team-card-h {
+    font-family: 'Poppins';
+    color: #2A3E79;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.team-card .team-card-job-desc {
+    font-family: 'Poppins';
+    color: #00A0AA;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.team-card .team-card-desc {
+    font-family: 'Poppins';
+    color: #595959;
+    font-size: 16px;
+}
+
+/* customer reviews */
+.home-sec-5 {
+    background-image: url('../images/home-sec-5-bg.png');
+}
+
+.review-slider .slick-track {
+    display: flex;
+    gap: 20px;
+}
+
+.review-slider .slick-slide {
+    background: #fff;
+    padding: 50px 30px;
+    border-radius: 20px;
+    /* transform: scale(0.9) !important; */
 }
