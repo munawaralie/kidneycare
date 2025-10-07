@@ -206,21 +206,28 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 10px;
     padding: 35px 0;
 }
 
 .header-r2-left {
-    width: 280px;
+    width: 220px;
     /* You may want to adjust this or make it flexible */
 }
 
-.header-r2-right {
-    width: calc(100% - 280px);
+.header-r2-center {
+    /* width: calc(100% - 50px - 220px); */
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+}
+
+.header-r2-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Menu container to toggle */
@@ -231,13 +238,13 @@ header {
 }
 
 /* Navigation list styling */
-.header-r2-right nav ul {
+.header-r2-center nav ul {
     display: flex;
     list-style-type: none;
     gap: 40px;
 }
 
-.header-r2-right nav ul li a {
+.header-r2-center nav ul li a {
     font-size: 16px;
     text-decoration: none;
     color: #595959;
@@ -257,6 +264,7 @@ header {
     background: var(--color-secondary);
     padding: 15px 30px;
     border-radius: 32px;
+    font-size: 18px;
     text-decoration: none;
     border: none;
     font-family: 'Poppins';
