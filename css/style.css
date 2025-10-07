@@ -102,11 +102,35 @@ html {
     overflow-x: hidden;
 }
 
-body,
-p {
-    /* optionally set a default font */
-    font-family: 'Poppins', sans-serif;
+body {
+    font-family: "Poppins";
 }
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Fira Sans';
+    color: #2A3E79;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 55px;
+}
+
+p {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: clamp(16px, 1.2vw, 18px);
+    color: #595959;
+}
+
 
 /* ---------- Layout containers ---------- */
 .container {
@@ -321,7 +345,7 @@ header {
 
 .home-sec-1 .content-heading {
     font-family: 'Fira Sans';
-    font-size: 51px;
+    font-size: 51px !important;
     color: #2a3e79;
     font-weight: 700;
     margin-bottom: 40px;
@@ -351,6 +375,13 @@ header {
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.contact-info .contact-info-call p,
+.contact-info .contact-info-location p {
+    color: #2A3E79;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .contact-info .contact-info-call a,
@@ -386,7 +417,7 @@ header {
 .form-group label {
     display: block;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 8px;
     color: #595959;
 }
@@ -515,6 +546,7 @@ header {
     color: #595959;
     margin-bottom: 20px;
     font-size: 16px;
+    font-weight: 400;
 }
 
 .Services-card .Services-card-btn,
@@ -684,6 +716,7 @@ header {
     font-family: 'Poppins';
     color: #595959;
     font-size: 16px;
+    font-weight: 400;
 }
 
 /* customer reviews */
@@ -779,7 +812,7 @@ header {
 }
 
 .slick-dots li button:before {
-    font-size: 20px !important;
+    font-size: 70px !important;
     color: #AFBED2 !important;
     opacity: 1 !important;
 }
