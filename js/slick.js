@@ -10,5 +10,34 @@ $(document).ready(function () {
     centerMode: true,
     centerPadding: '0px',
     dots: true,
+
+    // Responsive breakpoints
+    responsive: [
+      {
+        breakpoint: 1024, // screens <= 1024px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 768, // screens <= 768px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 480, // screens <= 480px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          dots: true,
+        },
+      },
+    ],
   });
 });

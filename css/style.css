@@ -122,6 +122,7 @@ h1 {
 
 h2 {
     font-size: 55px;
+    line-height: 100%;
 }
 
 p {
@@ -129,6 +130,7 @@ p {
     font-weight: 500;
     font-size: clamp(16px, 1.2vw, 18px);
     color: #595959;
+    line-height: 150%;
 }
 
 
@@ -213,7 +215,10 @@ header {
 
 .header-r2-left {
     width: 220px;
-    /* You may want to adjust this or make it flexible */
+}
+
+.header-r2-left img {
+    width: 100%;
 }
 
 .header-r2-center {
@@ -231,11 +236,11 @@ header {
 }
 
 /* Menu container to toggle */
-#menuList {
+/* #menuList {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-}
+} */
 
 /* Navigation list styling */
 .header-r2-center nav ul {
@@ -323,10 +328,9 @@ header {
 }
 
 /* Hamburger toggler (mobile) */
-.navbar-toggler {
+/* .navbar-toggler {
     display: none;
-    /* hide by default, show in mobile */
-}
+} */
 
 .navbar-toggler i {
     font-size: 30px;
@@ -357,6 +361,7 @@ header {
     color: #2a3e79;
     font-weight: 700;
     margin-bottom: 40px;
+    line-height: 65px;
 }
 
 .home-sec-1 .content-desc {
@@ -365,16 +370,14 @@ header {
     color: #595959;
     margin-bottom: 40px;
     font-weight: 500;
+    line-height: 200%;
 }
 
 .contact-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.contact-info {
-    display: flex;
+    flex-wrap: wrap;
 }
 
 .contact-info .contact-info-call,
@@ -437,6 +440,7 @@ header {
     border: 1px solid #0000001A;
     border-radius: 32px;
     font-size: 14px;
+    min-height: 50px;
 }
 
 .form-group textarea {
@@ -490,7 +494,7 @@ header {
 .Services-card-row {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     gap: 29px;
 }
 
@@ -555,6 +559,7 @@ header {
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: 400;
+    line-height: 150%;
 }
 
 .Services-card .Services-card-btn,
@@ -597,15 +602,20 @@ header {
     justify-content: space-between;
     background-color: #fff;
     gap: 20px;
-    align-items: center;
+    align-items: stretch;
 }
 
 .location-card-row .location-card .location-card-img {
     max-width: 242px;
 }
 
+.location-card-row .location-card .location-card-img img {
+    height: 100%;
+    width: 100%;
+}
+
 .location-card-row .location-card .location-card-content {
-    padding: 40px 20px;
+    padding: 40px 20px 40px 0px;
     color: #595959;
     font-size: 16px;
     width: calc(100% - 242px);
@@ -625,6 +635,10 @@ header {
     margin-bottom: 8px;
 }
 
+.location-card .location-details p {
+    text-align: start;
+}
+
 .location-card .location-details img {
     width: 18px;
     height: 18px;
@@ -633,6 +647,7 @@ header {
 .location-card .contact-details {
     display: flex;
     margin-bottom: 14px;
+    flex-wrap: wrap;
 }
 
 .contact-details .call,
@@ -648,6 +663,7 @@ header {
 .contact-details .fax a {
     text-decoration: none;
     color: #595959;
+    text-align: start;
 }
 
 .home-sec-3 .r3,
@@ -673,6 +689,10 @@ header {
     min-width: 218px;
 }
 
+.home-sec-4 {
+    padding-top: 0px;
+}
+
 /* our team  */
 .home-sec-4,
 .home-sec-6 {
@@ -681,7 +701,9 @@ header {
 
 .team-card-row {
     display: flex;
+    align-items: stretch;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .team-card-row .team-card {
@@ -690,10 +712,9 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 40px 20px;
-    box-shadow: 0px 0px 30px 0 #6060600D;
     transition: all ease 0.7s;
 }
 
@@ -725,6 +746,7 @@ header {
     color: #595959;
     font-size: 16px;
     font-weight: 400;
+    line-height: 150%;
 }
 
 /* customer reviews */
@@ -797,6 +819,7 @@ header {
     color: #595959;
     font-size: 18px;
     font-weight: 400;
+    line-height: 179%;
 }
 
 .review-slider .slick-slide {
@@ -834,6 +857,7 @@ header {
     display: flex;
     align-items: center;
     gap: 100px;
+    flex-wrap: wrap;
 }
 
 .home-sec-6 .r1>div {
@@ -844,6 +868,10 @@ header {
     width: 645px;
     border-radius: 20px;
     overflow: hidden;
+}
+
+.home-sec-6 .r1 .quality-doctor-img img {
+    width: 100%;
 }
 
 .home-sec-6 .r1 .quality-doctor-content {
@@ -883,7 +911,8 @@ header {
     /* or you can use a character */
     position: absolute;
     left: 0;
-    top: 50%;
+    /* top: 50%; */
+    top: 16px;
     transform: translateY(-50%);
     width: 20px;
     /* icon width */
@@ -904,19 +933,25 @@ footer * {
 
 footer .r1 {
     display: flex;
-    gap: 100px;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 footer .r1 .footer-logo-part {
-    width: 427px;
+    width: 30%;
     margin-bottom: 23px;
 }
 
 footer .r1 .footer-logo-part .logo {
     background: #fff;
-    width: 285px;
+    max-width: 285px;
     padding: 64px 28px 28px 28px;
     border-radius: 0px 0px 20px 20px;
+}
+
+footer .r1 .footer-logo-part .logo img {
+    width: 100%;
 }
 
 footer .r1 .footer-logo-part .footer-desc {
@@ -924,6 +959,7 @@ footer .r1 .footer-logo-part .footer-desc {
     font-size: 18px;
     font-weight: 400;
     margin: 23px 0px;
+    line-height: 179%;
 }
 
 .useful-links,
@@ -937,6 +973,18 @@ footer .r1 .footer-logo-part .footer-desc {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 15px;
+}
+
+footer .useful-links {
+    width: 15%;
+}
+
+footer .Services {
+    width: 15%;
+}
+
+footer .contact {
+    width: 24%;
 }
 
 .useful-links ul,
@@ -1005,3 +1053,25 @@ footer .r2 p {
     text-align: center;
     padding: 25px;
 }
+
+
+/* ///// */
+/* Default: show menu normally */
+.header-r2-center nav ul {
+    display: flex;
+    list-style: none;
+}
+
+/* Hide toggler on desktop */
+.navbar-toggler {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Responsive styles */
+/* .home-sec-3, */
+/* .home-sec-6, */
+/* footer {
+    display: none;
+} */
