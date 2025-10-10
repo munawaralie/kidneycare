@@ -27,7 +27,7 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: false,
-          dots: false,
+          // dots: false,
         },
       },
       {
@@ -36,7 +36,7 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: false,
-          dots: true,
+          // dots: false,
         },
       },
     ],
