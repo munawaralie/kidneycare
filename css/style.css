@@ -189,7 +189,7 @@ header {
 .header-r1 .header-r1-right a {
     color: #fff;
     background: transparent;
-    padding: 7px 25px;
+    padding: 4px 25px;
     border: 2.5px solid #fff;
     border-radius: 32px;
     text-decoration: none;
@@ -268,7 +268,7 @@ header {
     text-transform: uppercase;
     color: #fff;
     background: var(--color-secondary);
-    padding: 15px 30px;
+    padding: 14px 30px;
     border-radius: 32px;
     font-size: clamp(16px, 1.2vw, 18px);
     text-decoration: none;
@@ -282,6 +282,7 @@ header {
     display: inline-block;
     text-align: center;
     margin-top: 25px;
+    font-family: 'Poppins';
 }
 
 
@@ -471,7 +472,7 @@ header {
     background-color: #2A3E79;
     color: white;
     border: none;
-    padding: 12px 32px;
+    padding: 14px 32px;
     border-radius: 32px;
     cursor: pointer;
     letter-spacing: 0.5px;
@@ -551,6 +552,8 @@ header {
     font-family: 'Poppins';
     color: #2A3E79;
     margin-bottom: 20px;
+    font-size: clamp(18px, 2vw, 20px);
+    /* min: 16px, fluid: 2vw, max: 20px */
 }
 
 .Services-card .Services-card-p {
@@ -563,6 +566,7 @@ header {
 
 .Services-card .Services-card-btn,
 .location-card-btn {
+    font-family: 'Poppins';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -578,6 +582,7 @@ header {
 
 .location-card-btn {
     padding: 0px;
+    font-family: 'Poppins';
     font-size: clamp(14px, 1.5vw, 16px);
 }
 
@@ -684,17 +689,29 @@ header {
 .home-sec-4 .view-more-btn {
     font-weight: 600;
     font-size: clamp(16px, 1.2vw, 18px);
-    padding: 10px 30px;
+    padding: 14px 30px;
     cursor: pointer;
     min-width: 218px;
+    font-family: 'Poppins';
 }
 
 .home-sec-3 .view-more-btn {
     font-weight: 600;
     font-size: clamp(16px, 1.2vw, 18px);
-    padding: 10px 30px;
+    padding: 14px 30px;
     cursor: pointer;
     min-width: 218px;
+    font-family: 'Poppins';
+}
+
+.contact-info-call-img span {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #00A0AA;
 }
 
 .home-sec-4 {
@@ -763,6 +780,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-bottom: 120px;
 }
 
 .review-slider .slide {
@@ -810,6 +828,7 @@ header {
     color: #2A3E79;
     font-weight: 600;
     font-size: 26px;
+    margin-bottom: 5px;
 }
 
 .slide .user-details .user-name .slide-card-post-desc {
@@ -1077,10 +1096,3 @@ footer .r2 p {
     cursor: pointer;
     font-size: 24px;
 }
-
-/* Responsive styles */
-/* .home-sec-3, */
-/* .home-sec-6, */
-/* footer {
-    display: none;
-} */
