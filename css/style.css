@@ -121,8 +121,9 @@ h1 {
 }
 
 h2 {
-    font-size: 55px;
-    line-height: 100%;
+    font-size: clamp(40px, 4vw, 55px);
+    line-height: clamp(1.1, 2.5vw, 1.3);
+    /* relative line-height scaling */
 }
 
 p {
@@ -301,7 +302,6 @@ header {
 
 .sec-heading {
     font-family: 'Fira Sans';
-    font-size: 55px;
     color: #2A3E79;
     font-weight: 700;
     margin-bottom: 20px;
@@ -311,7 +311,6 @@ header {
 
 .sec-para {
     font-family: 'Poppins';
-    font-size: 18px;
     color: #595959;
     margin-bottom: 50px;
     font-weight: 400;
@@ -357,16 +356,15 @@ header {
 
 .home-sec-1 .content-heading {
     font-family: 'Fira Sans';
-    font-size: 51px !important;
+    font-size: clamp(35px, 4vw, 51px);
     color: #2a3e79;
     font-weight: 700;
     margin-bottom: 40px;
-    line-height: 65px;
+    line-height: clamp(45px, 6vw, 65px);
 }
 
 .home-sec-1 .content-desc {
     font-family: 'Poppins';
-    font-size: 18px;
     color: #595959;
     margin-bottom: 40px;
     font-weight: 500;
@@ -391,15 +389,16 @@ header {
 .contact-info .contact-info-call p,
 .contact-info .contact-info-location p {
     color: #2A3E79;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 16px);
     font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .contact-info .contact-info-call a,
 .contact-info .contact-info-location a {
     text-decoration: none;
     color: #2A3E79;
-    font-size: 24px;
+    font-size: clamp(20px, 2vw, 24px);
     font-weight: 600;
 }
 
@@ -413,7 +412,7 @@ header {
 }
 
 .appointment-form .appointment-form-h {
-    font-size: 30px;
+    font-size: clamp(24px, 3vw, 30px);
     text-align: center;
     color: #2A3E79;
     margin-bottom: 24px;
@@ -456,7 +455,7 @@ header {
 }
 
 .form-note {
-    font-size: 15px;
+    font-size: clamp(13px, 1.5vw, 15px);
     font-family: 'Poppins';
     text-align: center;
     color: #595959;
@@ -477,7 +476,7 @@ header {
     cursor: pointer;
     letter-spacing: 0.5px;
     width: 100%;
-    font-size: 18px;
+    font-size: clamp(16px, 2vw, 18px);
     font-family: 'Poppins';
     font-weight: 600;
 }
@@ -557,7 +556,7 @@ header {
 .Services-card .Services-card-p {
     color: #595959;
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 16px);
     font-weight: 400;
     line-height: 150%;
 }
@@ -603,6 +602,7 @@ header {
     background-color: #fff;
     gap: 20px;
     align-items: stretch;
+    overflow: hidden;
 }
 
 .location-card-row .location-card .location-card-img {
@@ -612,6 +612,7 @@ header {
 .location-card-row .location-card .location-card-img img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .location-card-row .location-card .location-card-content {
@@ -626,6 +627,8 @@ header {
     color: #2A3E79;
     margin-bottom: 15px;
     text-align: start;
+    font-size: clamp(20px, 2vw, 24px);
+
 }
 
 .location-card .location-details {
@@ -690,7 +693,7 @@ header {
 }
 
 .home-sec-4 {
-    padding-top: 0px;
+    /* padding-top: 0px; */
 }
 
 /* our team  */
@@ -763,6 +766,7 @@ header {
 
 .review-slider .slick-track {
     display: flex;
+    align-items: stretch;
     gap: 20px;
 }
 
@@ -940,7 +944,6 @@ footer .r1 {
 
 footer .r1 .footer-logo-part {
     width: 30%;
-    margin-bottom: 23px;
 }
 
 footer .r1 .footer-logo-part .logo {
@@ -1025,6 +1028,7 @@ footer .location .location-icon-cont {
 
 footer .location .location-icon-cont svg {
     margin-top: 5px;
+    margin-right: 10px;
 }
 
 footer .location .location-icon-cont .heading,
@@ -1033,6 +1037,7 @@ footer .location .location-icon-cont .heading,
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 10px;
+    display: flex;
 }
 
 .location .detailed-location {
@@ -1049,7 +1054,6 @@ footer .r2 p {
     font-family: 'Poppins';
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 10px;
     text-align: center;
     padding: 25px;
 }
