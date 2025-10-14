@@ -121,7 +121,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(40px, 4vw, 55px);
+    font-size: clamp(30px, 4vw, 55px);
     line-height: clamp(1.1, 2.5vw, 1.3);
     /* relative line-height scaling */
 }
@@ -129,7 +129,7 @@ h2 {
 p {
     font-family: "Poppins";
     font-weight: 500;
-    font-size: clamp(16px, 1.2vw, 18px);
+    font-size: clamp(14px, 1.2vw, 18px);
     color: #595959;
     line-height: 150%;
 }
@@ -270,7 +270,7 @@ header {
     background: var(--color-secondary);
     padding: 14px 30px;
     border-radius: 32px;
-    font-size: clamp(16px, 1.2vw, 18px);
+    font-size: clamp(14px, 1.2vw, 18px);
     text-decoration: none;
     border: none;
     font-family: 'Poppins';
@@ -278,7 +278,8 @@ header {
 }
 
 .home-sec-6 .qd-appointment-btn {
-    width: 333px;
+    /* width: 333px; */
+    padding: 14px 40px;
     display: inline-block;
     text-align: center;
     margin-top: 25px;
@@ -291,7 +292,8 @@ header {
 .home-sec-3,
 .home-sec-4,
 .home-sec-5,
-.home-sec-6 {
+.home-sec-6,
+.ckd-sec-2 {
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -319,12 +321,20 @@ header {
 }
 
 /* Hero / banner section */
-.home-sec-1 {
+.home-sec-1,
+.ckd-sec-1 {
     background-image: url('../images/home inner banner.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 170px;
+}
+
+.ckd-sec-1 {
+    /* background-image: url('../images/Chronic-Kidney-Disease-banner.png'); */
+    background-image: url('../images/Chronic-Kidney-Disease-banner-with-overlay.png');
+    padding-top: 247px;
+    padding-bottom: 105px;
 }
 
 /* Hamburger toggler (mobile) */
@@ -376,7 +386,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .contact-info .contact-info-call,
@@ -390,7 +399,7 @@ header {
 .contact-info .contact-info-call p,
 .contact-info .contact-info-location p {
     color: #2A3E79;
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: clamp(13px, 1.5vw, 16px);
     font-weight: 500;
     margin-bottom: 5px;
 }
@@ -399,7 +408,7 @@ header {
 .contact-info .contact-info-location a {
     text-decoration: none;
     color: #2A3E79;
-    font-size: clamp(20px, 2vw, 24px);
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 600;
 }
 
@@ -477,9 +486,10 @@ header {
     cursor: pointer;
     letter-spacing: 0.5px;
     width: 100%;
-    font-size: clamp(16px, 2vw, 18px);
+    font-size: clamp(14px, 2vw, 18px);
     font-family: 'Poppins';
     font-weight: 600;
+
 }
 
 .appointment-form input::placeholder,
@@ -552,7 +562,7 @@ header {
     font-family: 'Poppins';
     color: #2A3E79;
     margin-bottom: 20px;
-    font-size: clamp(18px, 2vw, 20px);
+    font-size: clamp(16px, 2vw, 20px);
     /* min: 16px, fluid: 2vw, max: 20px */
 }
 
@@ -583,7 +593,7 @@ header {
 .location-card-btn {
     padding: 0px;
     font-family: 'Poppins';
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: clamp(12px, 1.5vw, 16px);
 }
 
 /* our location  */
@@ -688,7 +698,7 @@ header {
 .home-sec-3 .view-more-btn,
 .home-sec-4 .view-more-btn {
     font-weight: 600;
-    font-size: clamp(16px, 1.2vw, 18px);
+    font-size: clamp(14px, 1.2vw, 18px);
     padding: 14px 30px;
     cursor: pointer;
     min-width: 218px;
@@ -697,7 +707,7 @@ header {
 
 .home-sec-3 .view-more-btn {
     font-weight: 600;
-    font-size: clamp(16px, 1.2vw, 18px);
+    font-size: clamp(14px, 1.2vw, 18px);
     padding: 14px 30px;
     cursor: pointer;
     min-width: 218px;
@@ -834,7 +844,7 @@ header {
 .slide .user-details .user-name .slide-card-post-desc {
     color: #595959;
     font-weight: 400;
-    font-size: clamp(16px, 1.2vw, 18px);
+    font-size: clamp(14px, 1.2vw, 18px);
 }
 
 .review-slider .slide .user-review-stars {
@@ -845,7 +855,7 @@ header {
 
 .user-review-desc p {
     color: #595959;
-    font-size: clamp(16px, 1.2vw, 18px);
+    font-size: clamp(14px, 1.2vw, 18px);
     font-weight: 400;
     line-height: 179%;
 }
@@ -908,7 +918,7 @@ header {
 
 .home-sec-6 .r1 .quality-doctor-content-h {
     font-family: 'Fira Sans';
-    font-size: clamp(35px, 4vw, 55px);
+    font-size: clamp(30px, 4vw, 55px);
     color: #2A3E79;
     font-weight: 700;
     margin-bottom: 48px;
@@ -918,9 +928,10 @@ header {
 .quality-doctor-content ul li {
     font-family: 'Poppins';
     color: #595959;
-    font-size: clamp(16px, 1.2vw, 18px);
-    margin-bottom: 25px;
+    font-size: clamp(14px, 1.2vw, 18px);
+    padding-bottom: 25px;
     font-weight: 400;
+    text-align: left;
 }
 
 .quality-doctor-content ul {
@@ -1095,4 +1106,186 @@ footer .r2 p {
     display: none;
     cursor: pointer;
     font-size: 24px;
+}
+
+.ckd-sec-1 .ckd-sec-1-h {
+    margin-bottom: 25px;
+}
+
+.ckd-sec-1 .ckd-sec-1-r1 {
+    max-width: 840px;
+}
+
+.ckd-sec-1 .ckd-sec-1-r1 .para,
+.ckd-sec-2-content .para {
+    font-weight: 400;
+    line-height: 197%;
+}
+
+.ckd-sec-2-content .para {
+    margin-bottom: 35px;
+}
+
+.ckd-sec-1 .ckd-sec-1-r1 .para span,
+.ckd-sec-2-content .para span {
+    font-weight: 700;
+}
+
+.ckd-sec-2-content p span {
+    line-height: 197%;
+}
+
+.ckd-sec-2 .ckd-sec-2-main-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ckd-sec-2-main-row .ckd-sec-2-content {
+    width: 64%;
+}
+
+
+.ckd-sec-2-main-row .ckd-sec-2-sidebar {
+    width: 32%;
+}
+
+.ckd-sec-2-sidebar .ckd-sec-2-sidebar-toc-h {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 20px 35px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0;
+    font-size: clamp(15px, 2vw, 20px);
+}
+
+.ckd-sec-2-sidebar ul {
+    padding: 25px 10px 20px 35px;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px 0 #6060600D;
+}
+
+.ckd-sec-2-sidebar ul li {
+    color: #595959;
+    line-height: 170%;
+    padding-bottom: 10px;
+    font-size: clamp(13px, 1.5vw, 15px);
+}
+
+.ckd-page h3 {
+    font-size: clamp(28px, 3vw, 36px);
+}
+
+.ckd-sec-2-content .ckd-sec-2-content-r2 {
+    padding: 50px 0;
+}
+
+.ckd-sec-2-content .ckd-sec-2-content-r2 img {
+    width: 100%;
+}
+
+.ckd-sec-2 .symptoms div,
+.ckd-sec-2 .disease div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ckd-sec-2 .symptoms,
+.ckd-sec-2 .disease,
+.ckd-sec-2 .progression {
+    margin-bottom: 20px;
+}
+
+.ckd-sec-2 .symptoms h3,
+.ckd-sec-2 .disease h3,
+.ckd-sec-2 .progression h3 {
+    margin-bottom: 0;
+}
+
+.ckd-sec-2 .symptoms ul,
+.ckd-sec-2 .disease ul,
+.ckd-sec-2 .progression ul {
+    padding: 25px 10px 20px 17px;
+}
+
+.ckd-sec-2 .symptoms ul.left-ul,
+.ckd-sec-2 .disease ul.left-ul {
+    width: 419px;
+}
+
+.ckd-sec-2 .symptoms ul.right-ul,
+.ckd-sec-2 .disease ul.right-ul {
+    width: calc(100% - 450px);
+}
+
+.ckd-sec-2 .symptoms ul li,
+.ckd-sec-2 .disease ul li,
+.ckd-sec-2 .progression ul li {
+    color: #595959;
+    line-height: 170%;
+    padding-bottom: 10px;
+    font-size: clamp(13px, 1.5vw, 15px);
+}
+
+.ckd-sec-2-sidebar ul,
+.ckd-sec-2-content ul {
+    list-style: none;
+}
+
+.ckd-sec-2-sidebar ul li,
+.ckd-sec-2-content ul li {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ckd-sec-2-sidebar ul li::before,
+.ckd-sec-2-content ul li::before {
+    content: "";
+    position: absolute;
+    left: -1.2em;
+    top: 1.2em;
+    width: 8px;
+    height: 8px;
+    background: #00A0AA;
+    border-radius: 50%;
+}
+
+.bp-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bp-table table tr th {
+    text-align: left;
+}
+
+.bp-table table tr th,
+.bp-table table tr td {
+    padding: 13px 35px;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: 400;
+}
+
+.bp-table table tr th:nth-last-child(1),
+.bp-table table tr td:nth-last-child(1) {
+    border-left: 1px solid #0000000f;
+    text-align: center;
+
+}
+
+.tables-cont {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bp-table table thead {
+    background: #00A0AA;
+    color: #fff;
+}
+
+.bp-table table tbody {
+    background: #F1FEFF;
+    color: #595959;
 }
