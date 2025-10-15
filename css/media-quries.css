@@ -114,13 +114,14 @@
         justify-content: center;
     }
 
-    .home-sec-1,
+    /* .home-sec-1,
     .home-sec-2,
     .home-sec-3,
     .home-sec-4,
     .home-sec-5,
     .home-sec-6,
-    .ckd-sec-2 {
+    .ckd-sec-2  */
+    section {
         padding-top: 60px;
         padding-bottom: 60px;
     }
@@ -177,13 +178,14 @@
         padding: 0 30px;
     }
 
-    .home-sec-1,
+    /* .home-sec-1,
     .home-sec-2,
     .home-sec-3,
     .home-sec-4,
     .home-sec-5,
     .home-sec-6,
-    .ckd-sec-2 {
+    .ckd-sec-2  */
+    section {
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -400,16 +402,20 @@
         padding-bottom: 100px !important;
     }
 
-    .ckd-sec-1 .ckd-sec-1-r1 {
+    .ckd-sec-1 .ckd-sec-1-r1,
+    .wtn-sec-1 .wtn-sec-1-r1 {
         max-width: 100%;
     }
 
     .ckd-sec-1 .ckd-sec-1-h,
-    .ckd-sec-1 .ckd-sec-1-r1 .para {
+    .ckd-sec-1 .ckd-sec-1-r1 .para,
+    .wtn-sec-1 .wtn-sec-1-h,
+    .wtn-sec-1 .wtn-sec-1-r1 .para {
         text-align: center;
     }
 
-    .ckd-sec-1 {
+    .ckd-sec-1,
+    .wtn-sec-1 {
         padding-top: 200px;
         padding-bottom: 70px;
     }
@@ -428,6 +434,18 @@
         width: 100%;
     }
 
+    .wtn-sec-2-r1 {
+        flex-wrap: wrap;
+    }
+
+    .wtn-sec-2-r1>div {
+        width: 100%;
+        padding: 50px 25px;
+    }
+
+    .wtn-sec-2-r1-left {
+        order: 1;
+    }
 
 }
 
@@ -506,14 +524,21 @@
         align-items: flex-start;
     }
 
-    .ckd-sec-1 {
+    .ckd-sec-1,
+    .wtn-sec-1 {
         padding-top: 170px;
         padding-bottom: 50px;
     }
 
     .ckd-sec-2 .symptoms div ul,
+    .ckd-sec-2 .treatments div ul,
     .ckd-sec-2 .disease div ul {
         width: 50% !important;
+    }
+
+    .ckd-page table tr th,
+    .ckd-page table tr td {
+        padding: 13px 10px 13px 15px;
     }
 }
 
@@ -603,14 +628,17 @@
     }
 
     .ckd-sec-2 .symptoms div,
+    .ckd-sec-2 .treatments div,
     .ckd-sec-2 .disease div {
         flex-direction: column;
         gap: 0px;
     }
 
     .ckd-sec-2 .symptoms div ul,
+    .ckd-sec-2 .treatments div ul,
     .ckd-sec-2 .disease div ul {
         width: 100% !important;
+        padding-bottom: 0px;
     }
 
 }

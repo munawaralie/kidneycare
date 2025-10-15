@@ -100,6 +100,7 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -134,6 +135,9 @@ p {
     line-height: 150%;
 }
 
+a {
+    text-decoration: none;
+}
 
 /* ---------- Layout containers ---------- */
 .container {
@@ -264,7 +268,8 @@ header {
 .header-appointment-btn,
 .home-sec-3 .view-more-btn,
 .home-sec-4 .view-more-btn,
-.qd-appointment-btn {
+.qd-appointment-btn,
+.wtn-sec-2 .view-more-btn {
     text-transform: uppercase;
     color: #fff;
     background: var(--color-secondary);
@@ -287,15 +292,28 @@ header {
 }
 
 
-.home-sec-1,
+/* .home-sec-1,
 .home-sec-2,
 .home-sec-3,
 .home-sec-4,
 .home-sec-5,
 .home-sec-6,
-.ckd-sec-2 {
+.ckd-sec-2  */
+section {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.wtn-sec-2 {
+    padding-top: 67px;
+}
+
+.ckd-sec-2 {
+    padding-bottom: 0 !important;
+}
+
+.ckd-page .home-sec-2 {
+    padding-top: 30px;
 }
 
 .home-sec-2 .r2,
@@ -322,7 +340,8 @@ header {
 
 /* Hero / banner section */
 .home-sec-1,
-.ckd-sec-1 {
+.ckd-sec-1,
+.wtn-sec-1 {
     background-image: url('../images/home inner banner.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -330,11 +349,15 @@ header {
     padding-top: 170px;
 }
 
-.ckd-sec-1 {
-    /* background-image: url('../images/Chronic-Kidney-Disease-banner.png'); */
+.ckd-sec-1,
+.wtn-sec-1 {
     background-image: url('../images/Chronic-Kidney-Disease-banner-with-overlay.png');
     padding-top: 247px;
     padding-bottom: 105px;
+}
+
+.wtn-sec-1 {
+    background-image: url('../images/whats-new-banner.png');
 }
 
 /* Hamburger toggler (mobile) */
@@ -604,7 +627,7 @@ header {
 .location-card-row {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     gap: 30px;
 }
 
@@ -621,7 +644,7 @@ header {
 }
 
 .location-card-row .location-card .location-card-img {
-    max-width: 242px;
+    max-width: 250px;
 }
 
 .location-card-row .location-card .location-card-img img {
@@ -634,7 +657,7 @@ header {
     padding: 40px 20px 40px 0px;
     color: #595959;
     font-size: clamp(14px, 1.5vw, 16px);
-    width: calc(100% - 242px);
+    width: calc(100% - 250px);
 }
 
 
@@ -1108,16 +1131,20 @@ footer .r2 p {
     font-size: 24px;
 }
 
-.ckd-sec-1 .ckd-sec-1-h {
+.ckd-sec-1 .ckd-sec-1-h,
+.wtn-sec-1 .wtn-sec-1-h {
     margin-bottom: 25px;
 }
 
-.ckd-sec-1 .ckd-sec-1-r1 {
+.ckd-sec-1 .ckd-sec-1-r1,
+.wtn-sec-1 .wtn-sec-1-r1 {
     max-width: 840px;
 }
 
 .ckd-sec-1 .ckd-sec-1-r1 .para,
-.ckd-sec-2-content .para {
+.ckd-sec-2-content .para,
+.wtn-sec-1 .wtn-sec-1-r1 .para,
+.wtn-sec-2-content .para {
     font-weight: 400;
     line-height: 197%;
 }
@@ -1165,14 +1192,24 @@ footer .r2 p {
     box-shadow: 0 4px 30px 0 #6060600D;
 }
 
-.ckd-sec-2-sidebar ul li {
+.ckd-sec-2-sidebar ul li a {
     color: #595959;
     line-height: 170%;
     padding-bottom: 10px;
     font-size: clamp(13px, 1.5vw, 15px);
+    font-weight: 400;
+    display: inline-block;
+    transition: all ease 0.3s;
 }
 
-.ckd-page h3 {
+.ckd-sec-2-sidebar ul li a:hover {
+    color: #00A0AA;
+    transform: scale(1.04) translateX(5px);
+    /* scale + move right */
+}
+
+.ckd-page h3,
+.wtn-page h3 {
     font-size: clamp(28px, 3vw, 36px);
 }
 
@@ -1185,6 +1222,7 @@ footer .r2 p {
 }
 
 .ckd-sec-2 .symptoms div,
+.ckd-sec-2 .treatments div,
 .ckd-sec-2 .disease div {
     display: flex;
     justify-content: space-between;
@@ -1198,34 +1236,39 @@ footer .r2 p {
 }
 
 .ckd-sec-2 .symptoms h3,
+.ckd-sec-2 .treatments h3,
 .ckd-sec-2 .disease h3,
 .ckd-sec-2 .progression h3 {
     margin-bottom: 0;
 }
 
 .ckd-sec-2 .symptoms ul,
+.ckd-sec-2 .treatments ul,
 .ckd-sec-2 .disease ul,
 .ckd-sec-2 .progression ul {
     padding: 25px 10px 20px 17px;
 }
 
 .ckd-sec-2 .symptoms ul.left-ul,
+.ckd-sec-2 .treatments ul.left-ul,
 .ckd-sec-2 .disease ul.left-ul {
     width: 419px;
 }
 
 .ckd-sec-2 .symptoms ul.right-ul,
+.ckd-sec-2 .treatments ul.right-ul,
 .ckd-sec-2 .disease ul.right-ul {
     width: calc(100% - 450px);
 }
 
 .ckd-sec-2 .symptoms ul li,
+.ckd-sec-2 .treatments ul li,
 .ckd-sec-2 .disease ul li,
 .ckd-sec-2 .progression ul li {
     color: #595959;
     line-height: 170%;
     padding-bottom: 10px;
-    font-size: clamp(13px, 1.5vw, 15px);
+    font-size: clamp(14px, 1.2vw, 18px);
 }
 
 .ckd-sec-2-sidebar ul,
@@ -1252,40 +1295,118 @@ footer .r2 p {
     border-radius: 50%;
 }
 
-.bp-table table {
+.ckd-page table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.bp-table table tr th {
+.ckd-page table tr th {
     text-align: left;
 }
 
-.bp-table table tr th,
-.bp-table table tr td {
+.ckd-page table tr th,
+.ckd-page table tr td {
     padding: 13px 35px;
     font-size: clamp(14px, 1.2vw, 18px);
     font-weight: 400;
 }
 
-.bp-table table tr th:nth-last-child(1),
-.bp-table table tr td:nth-last-child(1) {
+.ckd-page .goals table tr th:nth-last-child(1),
+.ckd-page .goals table tr td:nth-last-child(1) {
     border-left: 1px solid #0000000f;
     text-align: center;
-
+    width: 30%;
 }
 
-.tables-cont {
+.ckd-page .stages table tr th,
+.ckd-page .stages table tr td {
+    border-left: 1px solid #0000000f;
+    width: 20%;
+}
+
+.ckd-page .stages table tr th:nth-child(2),
+.ckd-page .stages table tr td:nth-child(2) {
+    text-align: center;
+}
+
+.ckd-page .stages table tr th:nth-last-child(1),
+.ckd-page .stages table tr td:nth-last-child(1) {
+    border-left: 1px solid #0000000f;
+    width: 60%;
+}
+
+.ckd-sec-2 .goals,
+.ckd-sec-2 .stages {
+    margin-bottom: 50px;
+}
+
+.goals-tables-cont,
+.stages-tables-cont {
     border-radius: 10px;
     overflow: hidden;
 }
 
-.bp-table table thead {
+.stages-tables-cont {
+    margin-bottom: 30px;
+}
+
+.ckd-page table thead {
     background: #00A0AA;
     color: #fff;
 }
 
-.bp-table table tbody {
+.ckd-page table tbody {
     background: #F1FEFF;
     color: #595959;
+}
+
+.wtn-sec-2 p {
+    font-weight: 400;
+    font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.wtn-sec-2-r1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.wtn-sec-2-r1>div {
+    width: calc(50% - 25px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.wtn-sec-2-r1 .wtn-sec-2-r1-right {
+    background: var(--gradient-primary);
+    color: #fff;
+}
+
+.wtn-sec-2-r1 .wtn-sec-2-r1-right h3,
+.wtn-sec-2-r1 .wtn-sec-2-r1-right p,
+.wtn-sec-2-r1 .wtn-sec-2-r1-right .view-more-btn {
+    color: #fff;
+}
+
+.wtn-sec-2-r1 .wtn-sec-2-r1-right p,
+.wtn-sec-2-r1 .wtn-sec-2-r1-left p {
+    padding-bottom: 60px;
+    opacity: 80%;
+}
+
+.wtn-sec-2-r1 .wtn-sec-2-r1-left .inner {
+    max-width: 585px;
+}
+
+.wtn-sec-2-r1 .wtn-sec-2-r1-right .inner {
+    max-width: 453px;
+}
+
+.wtn-sec-2-r1-left>*,
+.wtn-sec-2-r1-right>* {
+    text-align: center;
 }
